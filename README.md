@@ -4,7 +4,9 @@
 void ViewCart(void);
 
 //Declaring Global variables
+
 char food[42][50]={
+
 "Corn Soup           ","Paneer Pakoda       ","Spring Roll         ","Crispy Corn         ",//Starters
 "Tandoori Roti       ","Tawa Roti           ","Missi Roti          ","Naan                ",//Roti
 "Dal Fry             ","Kadhi Paneer        ","Palak Paneer        ","Shahi Paneer        ","Matar Paneer        ","Aloo Gobi           ","Dum Aloo            ",//Main Course
@@ -37,14 +39,18 @@ int main()
  fgets(name, 15, stdin);
  printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
  printf("\033[1;36m");
+ 
  printf("Hello %s",name);
  printf("Welcome to our SastaKhana.com\nA non-profitable Organisation\n");
  printf("\033[0m");
+ 
  printf("--------------------------------------------------------------\n");
  
 do{
 	//toggle = 1 will show menu
-	if(toggle==1){
+	if(toggle==1)
+	{
+	
 	printf("\033[0;31m");
 	printf("Enter a number to view food items from the following");
 	printf("\033[0m");
@@ -84,7 +90,7 @@ do{
     
     case 2:
     {
-					printf("◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙\n");
+	printf("◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙\n");
     	printf("\033[0;31m");
     	printf("You have selected ROTIS & MAIN COURSE. \nEnter the corresponding number to add the item to your CART\n");
     	printf("\033[0m");
@@ -235,8 +241,11 @@ do{
 //invalid message for option. A fallacy
 if(0==1){
   printf("\033[0;31m");
+  
   Invalid:printf("\n\n Please Enter Valid Input");
+  
   printf("\033[0m");
+  
 }
 
 //Displays Cart
@@ -274,10 +283,10 @@ if(0==1){
     printf("** Enter Valid id **\n");
    }
        
-							printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-       printf("\033[0;31m");
-       printf("Here are your revised items %s\n", name);
-       printf("\033[0m");     
+	printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("\033[0;31m");
+        printf("Here are your revised items %s\n", name);
+        printf("\033[0m");     
 		
 		ViewCart();
   }
@@ -316,10 +325,10 @@ if(0==1){
     printf("► Enter Valid id\n");
    }
        
-							printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
       	printf("\033[0;31m");
-       printf("Here are your revised items %s\n", name);
-       printf("\033[0m");
+       	printf("Here are your revised items %s\n", name);
+       	printf("\033[0m");
 
 ViewCart();
   } 
