@@ -1,54 +1,54 @@
 # IT-Project-Group-35
-#include<stdio.h>
-//Declaring function
-void ViewCart(void);
+	#include<stdio.h>
+	//Declaring function
+	void ViewCart(void);
 
-//Declaring Global variables
+	//Declaring Global variables
 
-char food[42][50]={
+	char food[42][50]={
 
-"Corn Soup           ","Paneer Pakoda       ","Spring Roll         ","Crispy Corn         ",//Starters
-"Tandoori Roti       ","Tawa Roti           ","Missi Roti          ","Naan                ",//Roti
-"Dal Fry             ","Kadhi Paneer        ","Palak Paneer        ","Shahi Paneer        ","Matar Paneer        ","Aloo Gobi           ","Dum Aloo            ",//Main Course
-"Pav Bhaji           ","Chola Kulcha        ","Vegetable Burger    ","Paani Puri          ","Bhel Puri           ","Dahi Puri           ",//Snacks
-"Steamed Rice        ","Jeera Rice          ","Schezwan Rice       ","Veg Biryani         ", "Pulao              ","Khichadi            ",//Rice
-"Masala Dosa         ","Paper Dosa          ","Uttapam             ","Onion Uttapam       ","Idli Sambar         ","Medu Vada           ","Vada Sambar         ",//South Indian
-"Chocolate Ice Cream ","Vanilla Ice Cream   ","Strawberry Ice Cream",//Ice Cream
-"Masala Tea          ","Mango Lassi         ","Plain Lassi         ","Chocolate Milk Shake","Badam Milk Shake    " //Appetizers
-};
+	"Corn Soup           ","Paneer Pakoda       ","Spring Roll         ","Crispy Corn         ",//Starters
+	"Tandoori Roti       ","Tawa Roti           ","Missi Roti          ","Naan                ",//Roti
+	"Dal Fry             ","Kadhi Paneer        ","Palak Paneer        ","Shahi Paneer        ","Matar Paneer        ","Aloo Gobi           ","Dum Aloo            ",//Main Course
+	"Pav Bhaji           ","Chola Kulcha        ","Vegetable Burger    ","Paani Puri          ","Bhel Puri           ","Dahi Puri           ",//Snacks
+	"Steamed Rice        ","Jeera Rice          ","Schezwan Rice       ","Veg Biryani         ", "Pulao              ","Khichadi            ",//Rice
+	"Masala Dosa         ","Paper Dosa          ","Uttapam             ","Onion Uttapam       ","Idli Sambar         ","Medu Vada           ","Vada Sambar         ",//South Indian
+	"Chocolate Ice Cream ","Vanilla Ice Cream   ","Strawberry Ice Cream",//Ice Cream
+	"Masala Tea          ","Mango Lassi         ","Plain Lassi         ","Chocolate Milk Shake","Badam Milk Shake    " //Appetizers
+	};
 
-int cart[42];
-const int cost[42];
-int totalCost,toggle=1;
-char name[15];
+	int cart[42];
+	const int cost[42];
+	int totalCost,toggle=1;
+	char name[15];
 
 
 
-//Main Program Starts
-int main()
-{
+	//Main Program Starts
+	int main()
+	{
  
 
- int choice;
- for(int i=0;i<43;i++)
- cart[i]=0;
+ 	int choice;
+ 	for(int i=0;i<43;i++)
+ 	cart[i]=0;
   
   
-// Starting Screen
- printf("Please Enter Your Name : \n");
- fgets(name, 15, stdin);
- printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
- printf("\033[1;36m");
+	// Starting Screen
+ 	printf("Please Enter Your Name : \n");
+ 	fgets(name, 15, stdin);
+ 	printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
+ 	printf("\033[1;36m");
  
- printf("Hello %s",name);
- printf("Welcome to our SastaKhana.com\nA non-profitable Organisation\n");
- printf("\033[0m");
+ 	printf("Hello %s",name);
+ 	printf("Welcome to our SastaKhana.com\nA non-profitable Organisation\n");
+ 	printf("\033[0m");
  
- printf("--------------------------------------------------------------\n");
+ 	printf("--------------------------------------------------------------\n");
  
-do{
-	//toggle = 1 will show menu
-	if(toggle==1)
+	do{
+		//toggle = 1 will show menu
+		if(toggle==1)
 	{
 	
 	printf("\033[0;31m");
@@ -235,20 +235,20 @@ do{
     default:
     break;
     
-}
-}
-//Menu is finished
-//invalid message for option. A fallacy
-if(0==1){
-  printf("\033[0;31m");
+	}
+	}
+	//Menu is finished
+	//invalid message for option. A fallacy
+	if(0==1){
+  	printf("\033[0;31m");
   
-  Invalid:printf("\n\n Please Enter Valid Input");
+  	Invalid:printf("\n\n Please Enter Valid Input");
   
-  printf("\033[0m");
+  	printf("\033[0m");
   
-}
+	}
 
-//Displays Cart
+	//Displays Cart
   
 		printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
  
@@ -262,26 +262,26 @@ if(0==1){
  
 
 
-//Deletes a item
+	//Deletes a item
   
-  if(toggle==2)
-  {
-   int id;
+  	if(toggle==2)
+  	{
+   	int id;
    
-			printf("►Enter id to delete item\n");
+	printf("►Enter id to delete item\n");
    
-			scanf("%d",&id);
+	scanf("%d",&id);
    
-			if(id<42&&id>=0){
+	if(id<42&&id>=0){
    
-			totalCost=totalCost-(cost[id]*cart[id]);
+	totalCost=totalCost-(cost[id]*cart[id]);
    
-			cart[id]=0;
-   }
+	cart[id]=0;
+   	}
    
 			else{
     printf("** Enter Valid id **\n");
-   }
+   	}
        
 	printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         printf("\033[0;31m");
@@ -289,53 +289,54 @@ if(0==1){
         printf("\033[0m");     
 		
 		ViewCart();
-  }
+  	}
   
-  //Changes quantity of an item
+  	//Changes quantity of an item
   
-  if(toggle==3)
-  {
-   int id,quantity;
+  	if(toggle==3)
+  	{
+ 	int id,quantity;
    
-   printf("---------------------------------------------------------------\n");
+   	printf("---------------------------------------------------------------\n");
    
-			printf("\033[0;33m");
+	printf("\033[0;33m");
    
-			printf("► Enter id to Change quantity of an item\n");
+	printf("► Enter id to Change quantity of an item\n");
    
-			scanf("%d",&id);
+	scanf("%d",&id);
    
-			printf("---------------------------------------------------------------\n");
+	printf("---------------------------------------------------------------\n");
    
-			printf("► Enter quantity to be changed of an item\n");
+	printf("► Enter quantity to be changed of an item\n");
    
-			scanf("%d",&quantity);
+	scanf("%d",&quantity);
    
-			if(id<42 && id>=0){
-    if(quantity>0 && cart[id]>0){ 
+	if(id<42 && id>=0){
+    	if(quantity>0 && cart[id]>0){ 
         totalCost += cost[id]*(quantity-cart[id]);
         cart[id] = quantity;
-           
-    }
+       }
+	   
     else{
        printf("► Item has no Quantity.Please Try again\n");
-    }
+    	}
      }
-     else{
-    printf("► Enter Valid id\n");
-   }
+     
+	 else{
+    	printf("► Enter Valid id\n");
+		}
        
 	printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
       	printf("\033[0;31m");
        	printf("Here are your revised items %s\n", name);
        	printf("\033[0m");
 
-ViewCart();
-  } 
+	ViewCart();
+  	} 
  
 
-printf("\n");
-}while(toggle==1 || toggle==2 ||toggle==3);
+	printf("\n");
+	}while(toggle==1 || toggle==2 ||toggle==3);
 
 
  
@@ -350,33 +351,33 @@ printf("\n");
 	printf("\033[0m");
  
 	printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
-}
+	}
 
-void ViewCart(void)
-{
+	void ViewCart(void)
+	{
 		
 		printf("\033[0;34m");
-  printf("ITEM ID\t\t\t\tITEM NAME\t\t\tQUANTITY\t\tCOST\n");
-  printf("\033[0m");
+  	printf("ITEM ID\t\t\t\tITEM NAME\t\t\tQUANTITY\t\tCOST\n");
+  	printf("\033[0m");
   
 		for(int i=0;i<42;i++)
-  {
+  	{
    
 			if(cart[i]!=0)
-   {
+   	{
 				
 				printf("%d\t\t\t%s\t\t\t%d\t\t\t%d\n",i,food[i],cart[i],(cost[i]*cart[i]));
 				
-   }
-  }
-  printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+   	}
+  	}
+  	printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
   
 		printf("\033[0;36m");
-  printf("Total Cost is \t\t\t₹ %d\n",totalCost);
-  printf("\033[0m");
+  	printf("Total Cost is \t\t\t₹ %d\n",totalCost);
+  	printf("\033[0m");
   
-		printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-  printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+	printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+  	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
   
 		printf("\033[0;33m");
   
