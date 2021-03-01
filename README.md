@@ -1,4 +1,4 @@
-# IT-Project-Grroup-35
+# IT-Project-Group-35
 #include<stdio.h>
 //Declaring function
 void ViewCart(void);
@@ -6,19 +6,12 @@ void ViewCart(void);
 //Declaring Global variables
 char food[42][50]={
 "Corn Soup           ","Paneer Pakoda       ","Spring Roll         ","Crispy Corn         ",//Starters
-
 "Tandoori Roti       ","Tawa Roti           ","Missi Roti          ","Naan                ",//Roti
-
 "Dal Fry             ","Kadhi Paneer        ","Palak Paneer        ","Shahi Paneer        ","Matar Paneer        ","Aloo Gobi           ","Dum Aloo            ",//Main Course
-
 "Pav Bhaji           ","Chola Kulcha        ","Vegetable Burger    ","Paani Puri          ","Bhel Puri           ","Dahi Puri           ",//Snacks
-
 "Steamed Rice        ","Jeera Rice          ","Schezwan Rice       ","Veg Biryani         ", "Pulao              ","Khichadi            ",//Rice
-
 "Masala Dosa         ","Paper Dosa          ","Uttapam             ","Onion Uttapam       ","Idli Sambar         ","Medu Vada           ","Vada Sambar         ",//South Indian
-
 "Chocolate Ice Cream ","Vanilla Ice Cream   ","Strawberry Ice Cream",//Ice Cream
-
 "Masala Tea          ","Mango Lassi         ","Plain Lassi         ","Chocolate Milk Shake","Badam Milk Shake    " //Appetizers
 };
 
@@ -26,6 +19,9 @@ int cart[42];
 const int cost[42];
 int totalCost,toggle=1;
 char name[15];
+
+
+
 //Main Program Starts
 int main()
 {
@@ -47,20 +43,20 @@ int main()
  printf("--------------------------------------------------------------\n");
  
 do{
-//toggle = 1 will show menu
-if(toggle==1){
-printf("\033[0;31m");
-printf("Enter a number to view food items from the following");
-printf("\033[0m");
+	//toggle = 1 will show menu
+	if(toggle==1){
+	printf("\033[0;31m");
+	printf("Enter a number to view food items from the following");
+	printf("\033[0m");
 
-printf("\033[0;33m");
-printf("\n♦ 1 - Starters\n♦ 2 - Rotis & Main Course\n♦ 3 - Snacks\n♦ 4 - Rice\n♦ 5 - South Indian\n♦ 6 - Ice Cream\n♦ 7 - Appetizers\n♦ Any other number to exit\n");
-printf("\033[0m");
-printf("--------------------------------------------------------------\n");
-scanf("%d",&choice);
-//sub-menu or choice of category on menu
-switch(choice)
-{
+	printf("\033[0;33m");
+	printf("\n♦ 1 - Starters\n♦ 2 - Rotis & Main Course\n♦ 3 - Snacks\n♦ 4 - Rice\n♦ 5 - South Indian\n♦ 6 - Ice Cream\n♦ 7 - Appetizers\n♦ Any other number to exit\n");
+	printf("\033[0m");
+	printf("--------------------------------------------------------------\n");
+	scanf("%d",&choice);
+	//sub-menu or choice of category on menu
+	switch(choice)
+	{
     
     case 1:
     {printf("◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙\n");
@@ -87,22 +83,24 @@ switch(choice)
     
     
     case 2:
-    {printf("◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙\n");
-    printf("\033[0;31m");
-    printf("You have selected ROTIS & MAIN COURSE. \nEnter the corresponding number to add the item to your CART\n");
-    printf("\033[0m");
-    printf("\033[0;32m");
-    for(int count = 4;count<15;count++)
-    printf("○ %d. %s\n",count-3,food[count]);
-    printf("\033[0m");
-    printf("---------------------------------------------------------------\n");
-    int option;
-    scanf("%d",&option);
+    {
+					printf("◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙◙\n");
+    	printf("\033[0;31m");
+    	printf("You have selected ROTIS & MAIN COURSE. \nEnter the corresponding number to add the item to your CART\n");
+    	printf("\033[0m");
+    	printf("\033[0;32m");
+    	for(int count = 4;count<15;count++)
+    	printf("○ %d. %s\n",count-3,food[count]);
+    	printf("\033[0m");
+    	printf("---------------------------------------------------------------\n");
+    	
+					int option;
+    	scanf("%d",&option);
      if(option>0&&option<=11){
-    cart[option+3]++;
-    printf("---------------------------------------------------------------\n");
-    totalCost+=cost[option+3];
-     }
+    	cart[option+3]++;
+    	printf("---------------------------------------------------------------\n");
+    	totalCost+=cost[option+3];
+    }
         else
         goto Invalid;
     }
@@ -242,11 +240,16 @@ if(0==1){
 }
 
 //Displays Cart
-  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("\033[0;31m");
-  printf("Here is your cart %s\n", name);
-  printf("\033[0m");
- ViewCart();
+  
+		printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+ 
+		printf("\033[0;31m");
+  
+		printf("Here is your cart %s\n", name);
+  
+		printf("\033[0m");
+ 
+	ViewCart();
  
 
 
@@ -255,20 +258,28 @@ if(0==1){
   if(toggle==2)
   {
    int id;
-   printf("►Enter id to delete item\n");
-   scanf("%d",&id);
-   if(id<42&&id>=0){
-   totalCost=totalCost-(cost[id]*cart[id]);
-   cart[id]=0;
+   
+			printf("►Enter id to delete item\n");
+   
+			scanf("%d",&id);
+   
+			if(id<42&&id>=0){
+   
+			totalCost=totalCost-(cost[id]*cart[id]);
+   
+			cart[id]=0;
    }
-   else{
+   
+			else{
     printf("** Enter Valid id **\n");
    }
-       printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+       
+							printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
        printf("\033[0;31m");
        printf("Here are your revised items %s\n", name);
        printf("\033[0m");     
-ViewCart();
+		
+		ViewCart();
   }
   
   //Changes quantity of an item
@@ -278,13 +289,20 @@ ViewCart();
    int id,quantity;
    
    printf("---------------------------------------------------------------\n");
-   printf("\033[0;33m");
-   printf("► Enter id to Change quantity of an item\n");
-   scanf("%d",&id);
-   printf("---------------------------------------------------------------\n");
-   printf("► Enter quantity to be changed of an item\n");
-   scanf("%d",&quantity);
-   if(id<42 && id>=0){
+   
+			printf("\033[0;33m");
+   
+			printf("► Enter id to Change quantity of an item\n");
+   
+			scanf("%d",&id);
+   
+			printf("---------------------------------------------------------------\n");
+   
+			printf("► Enter quantity to be changed of an item\n");
+   
+			scanf("%d",&quantity);
+   
+			if(id<42 && id>=0){
     if(quantity>0 && cart[id]>0){ 
         totalCost += cost[id]*(quantity-cart[id]);
         cart[id] = quantity;
@@ -297,10 +315,12 @@ ViewCart();
      else{
     printf("► Enter Valid id\n");
    }
-       printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-       printf("\033[0;31m");
+       
+							printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+      	printf("\033[0;31m");
        printf("Here are your revised items %s\n", name);
        printf("\033[0m");
+
 ViewCart();
   } 
  
@@ -309,35 +329,53 @@ printf("\n");
 }while(toggle==1 || toggle==2 ||toggle==3);
 
 
- printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
- printf("\033[1;36m");
- printf("¶¶¶ Your Final Cost is ₹ %d\n",totalCost);
- printf("Thank You %sFor Choosing SastaKhana. \nDo Visit us again.\n", name);
- printf("\033[0m");
- printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
+ 
+	printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
+ 
+	printf("\033[1;36m");
+ 
+	printf("¶¶¶ Your Final Cost is ₹ %d\n",totalCost);
+ 
+	printf("Thank You %sFor Choosing SastaKhana. \nDo Visit us again.\n", name);
+ 
+	printf("\033[0m");
+ 
+	printf("☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ ☻ \n");
 }
 
 void ViewCart(void)
 {
- printf("\033[0;34m");
+		
+		printf("\033[0;34m");
   printf("ITEM ID\t\t\t\tITEM NAME\t\t\tQUANTITY\t\tCOST\n");
   printf("\033[0m");
-  for(int i=0;i<42;i++)
+  
+		for(int i=0;i<42;i++)
   {
-   if(cart[i]!=0)
+   
+			if(cart[i]!=0)
    {
-    printf("%d\t\t\t%s\t\t\t%d\t\t\t%d\n",i,food[i],cart[i],(cost[i]*cart[i]));
+				
+				printf("%d\t\t\t%s\t\t\t%d\t\t\t%d\n",i,food[i],cart[i],(cost[i]*cart[i]));
+				
    }
   }
   printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-  printf("\033[0;36m");
+  
+		printf("\033[0;36m");
   printf("Total Cost is \t\t\t₹ %d\n",totalCost);
   printf("\033[0m");
-  printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+  
+		printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
-  printf("\033[0;33m");
-    printf("If you wish to buy anything more Enter\n◘ 1 to Add Item\n◘ 2 to Delete Items\n◘ 3 to Change Quantity \n◘ Any other number to Exit\n");
-  scanf("%d",&toggle);
-  printf("\033[0m");
-  return;
+  
+		printf("\033[0;33m");
+  
+		printf("If you wish to buy anything more Enter\n◘ 1 to Add Item\n◘ 2 to Delete Items\n◘ 3 to Change Quantity \n◘ Any other number to Exit\n");
+  
+		scanf("%d",&toggle);
+  
+		printf("\033[0m");
+  
+		return;
 }
